@@ -1,0 +1,291 @@
+/* Variables */
+:root {
+    --margenDeSecciones: 70px;
+    --colorDeFondo: #1a1a1a;
+    --wrapper: 10vw;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+/* Globales */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    line-height: 55px; /* Cambiar el espacio que hay entre los reglones*/
+    text-transform: uppercase; /* Transforma el texto a mayúscula */
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    height: 140px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed; /*Con esta declaración logramos que el header nos siga*/
+    top: 0;  /* Con position fixed, top nos ayuda a pegar el header en la parte superior*/
+    left: 0;
+    background-color: white;
+
+}
+.logo   {
+    width: 100px;
+}
+
+/* main */
+
+main {
+    margin-top: 200px;
+}
+
+main .main__texto {
+    margin: 30px 30px;
+}
+
+main .main__texto h1 {
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+main .main__texto h2 {
+    color: #ccc;
+}
+
+main .main__texto 
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.main__fotoPrincipal--imagen {
+    width: 90%;
+}
+
+.main__fotoPrincipal {
+    display: flex; /* Activamos display FLEX para poder alinear el contenido del figure*/
+    justify-content: center; /* Alineación horizontal del contenido del figure*/
+}
+
+/* About Me */
+
+.aboutMe__titulo {
+    padding: 20px;
+}
+.aboutMe {
+    background-color: var(--colorDeFondo);
+    color: white;
+}
+
+.aboutMe h1 {
+    text-align: center;
+}
+
+.aboutMe__cardContainer--item {
+    width: 300px;
+    height: 200px;
+    box-sizing: border-box; /* Esto es equivalente a object Fit pero este sirve para contenedores */
+    background-image: linear-gradient(
+        rgba(0, 194, 255, .5),
+        rgba(0, 194, 255, .5)
+    ), url("https://radio.uchile.cl/wp-content/uploads/2020/04/universidad-de-chile-e1561592684417.jpg");
+    border-radius: 20px;
+    background-position: 80% 70%;
+    padding: 50px 20px 0 20px; /*Top right bottom left */
+    margin: 50px auto;
+    font-weight: 700;
+    
+}
+
+#item2 {
+    background-image: linear-gradient(
+        rgba(255, 0, 196, .5),
+        rgba(255, 0, 196, .5)
+    ), url("https://i1.wp.com/www.thexboxhub.com/wp-content/uploads/2020/01/videogames.jpg?fit=767%2C511&ssl=1");
+}
+
+#item3 {
+    background-size: contain;
+    background-image: linear-gradient(
+        rgba(34, 194, 98, .5),
+        rgba(34, 194, 98, .5)
+    ), url("https://www.sincable.mx/wp-content/uploads/2020/01/patrick-ward-z_dLXnQg0JY-unsplash-scaled.jpg");
+}
+
+.aboutMe__cardContainer--item p {
+    margin-top: 10px;
+}
+/* Education */
+
+.education {
+    text-align: center;
+    margin: var(--margenDeSecciones), var(--wrapper) 0; /* Primer valor top, segundo valor left y right y tercer valor, bottom*/
+}
+
+.education h1{
+    margin-bottom: 20px;
+}
+
+.education .education__cardContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.education .education__cardContainer--item {
+    width: 130px;
+    height: 200px;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px 20px 0;
+}
+
+
+
+.item__logoUchile {
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+
+.skills {
+    background-color: var(--colorDeFondo);
+    padding: var(--margenDeSecciones) 0; /* Top y bottom, left y right */
+    color: white;
+    text-align: center;
+    
+}
+
+.skills .skills__container {
+    margin: 50px var(--wrapper);
+}
+
+.skills .skills__container .skills__container--item {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills__container--item__whiteContainer {
+    width: 220px;
+    height: 30px; 
+    background-color: white;
+}
+
+.skills__container--item__greenContainer {
+    background-color: #73fe52;
+    height: 100%;
+}
+
+#greenContainer__english {
+    width: 95%;
+}
+
+/* Hobbies */
+
+.hobbies {
+    margin-top: var(--margenDeSecciones);
+}
+
+.hobbies__scroll {
+    overflow: scroll;
+}
+
+.hobbies__container {
+    padding: 50px 0;
+    display: inline-flex;
+    margin: 0 --wrapper;
+}
+
+.hobbies__container--item {
+    margin-right: 50px
+}
+
+.hobbies__container--item img {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--colorDeFondo);
+    padding: var(--margenDeSecciones) 0;
+    margin-top: var(--margenDeSecciones);
+    color: white;
+
+}
+
+footer .footer__socialMedia {
+    padding: 50px 0;
+    margin: 0 var(--wrapper);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer__socialMedia--item {
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .footer__socialMedia--item img {
+    width: 40px;
+    object-fit: cover;
+
+}
+
+#footer__socialMedia--item__whatsapp {
+    border: 2px solid #61f22d;
+}
+
+#footer__socialMedia--item__fb {
+    border: 2px solid #3d81f5;
+}
+
+#footer__socialMedia--item__instagram {
+    border: 2px solid #c95ee1;
+}
+
+#footer__socialMedia--item__twitter{
+    border: 2px solid #3ddcf5;
+}
+
+#fb {
+    width: initial;
+    height: 40px;
+}
